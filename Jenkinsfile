@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // He cambiado esto para que apunte a TU repositorio
-                git 'https://github.com/aarteagavargas/Demo-Serenity-Cucumber.git'
+                git 'https://github.com/cbbemiguelangelarzequ-lab/Demo-Serenity-Cucumber.git'
             }
         }
         stage('Build & Test') {
