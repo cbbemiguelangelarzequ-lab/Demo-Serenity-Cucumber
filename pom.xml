@@ -9,10 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-            </properties>
+    </properties>
     <dependencies>
     <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core -->
     <dependency>
@@ -73,9 +73,9 @@
                     <include>**/Runner*.java</include>
                 </includes>
                 <systemPropertyVariables>
-                    <surefire.security.anager>
-                        java.lan.SecurityManager
-                    </surefire.security.anager>
+                    <surefire.security.manager>
+                        java.lang.SecurityManager
+                    </surefire.security.manager>
                 </systemPropertyVariables>
             </configuration>
             <executions>
@@ -94,7 +94,7 @@
                 <version>3.14.0</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
-                    <source>${maven.compiler.target}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
 
             </plugin>
