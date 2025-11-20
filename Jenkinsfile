@@ -59,9 +59,9 @@ pipeline {
     post {
         always {
             echo 'Pipeline finalizado.'
-            // Archivar reportes
+            
             archiveArtifacts artifacts: 'target/site/serenity/**/*', allowEmptyArchive: true
-            // Limpiar workspace si es necesario
+            
             cleanWs(patterns: [[pattern: 'target/surefire-reports/**', type: 'INCLUDE']])
         }
        
