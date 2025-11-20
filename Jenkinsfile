@@ -64,14 +64,6 @@ pipeline {
             // Limpiar workspace si es necesario
             cleanWs(patterns: [[pattern: 'target/surefire-reports/**', type: 'INCLUDE']])
         }
-        success {
-            echo '✅ Build exitoso! Todas las pruebas pasaron.'
-        }
-        failure {
-            echo '❌ Build falló. Revisa los logs para más detalles.'
-        }
-        unstable {
-            echo '⚠️ Build inestable. Algunas pruebas fallaron.'
-        }
+       
     }
 }
