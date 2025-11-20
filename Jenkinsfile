@@ -24,7 +24,7 @@ pipeline {
                 echo 'Compilando y ejecutando pruebas...'
                 script {
                     try {
-                        bat 'mvn clean verify'
+                        bat 'mvn clean verify -Dwebdriver.driver=chrome -Dheadless.mode=true'
                     } catch (Exception e) {
                         currentBuild.result = 'FAILURE'
                         error "Las pruebas fallaron: ${e.message}"
