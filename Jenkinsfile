@@ -15,7 +15,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Obteniendo código del repositorio...'
-                git branch: 'main', url: 'https://github.com/Laura4lilavati/Demo-Serenity-Cucumber.git'
+                git branch: 'main', url: 'https://github.com/cbbemiguelangelarzequ-lab/Demo-Serenity-Cucumber.git'
             }
         }
         
